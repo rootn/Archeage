@@ -1,0 +1,11 @@
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\Release\House Plotter.dll.config
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\Release\House Plotter.dll
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\Release\House Plotter.pdb
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\Release\ArcheBuddy.dll
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\Release\Buddy.Store.dll
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\Release\Buddy.Auth.dll
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Release\Plotter.PlotForm.resources
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Release\House_Plotter.Properties.Resources.resources
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Release\House Plotter.csproj.GenerateResource.Cache
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Release\House Plotter.dll
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Release\House Plotter.pdb

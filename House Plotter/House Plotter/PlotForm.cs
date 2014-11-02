@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using Plotter.Source;
 
@@ -13,15 +13,16 @@ namespace Plotter
 {
     public partial class PlotForm : Form
     {
-        public int housePos1;
-        public int housePos2;
-        public int housePos3;
-        private uint houseID;
+        public int housePosX = 0;
+        public int housePosY = 0;
+        public int housePosZ = 0;
+        private uint houseID = 0;
         housePlotter plotter;
 
         public PlotForm()
         {
             InitializeComponent();
+            this.designList.SelectedIndex = 0;
         }
 
         public void setPlotter(housePlotter obj)
@@ -31,7 +32,7 @@ namespace Plotter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            plotter.markHouseOnMap(housePos1, housePos2, housePos3);
+            plotter.markHouseOnMap(housePosX, housePosY, housePosZ);
         }
 
         private void PlotForm_Load(object sender, EventArgs e)
@@ -46,31 +47,51 @@ namespace Plotter
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            housePos1 = Int32.Parse(this.Text);
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            housePos2 = Int32.Parse(this.Text);
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            housePos3 = Int32.Parse(this.Text);
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0) houseID = 21168;
-            else if (comboBox1.SelectedIndex == 1) houseID = 21172;
-            else if (comboBox1.SelectedIndex == 2) houseID = 21171;
-            else if (comboBox1.SelectedIndex == 3) houseID = 15566;
+            if (designList.SelectedIndex == 0) houseID = 21168;
+            else if (designList.SelectedIndex == 1) houseID = 21172;
+            else if (designList.SelectedIndex == 2) houseID = 21171;
+            else if (designList.SelectedIndex == 3) houseID = 15566;
             else houseID = 21165;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            plotter.spamHouse(houseID, housePos1, housePos2, housePos3);
+            plotter.spamHouse(houseID, housePosX, housePosY, housePosZ);
+        }
+
+        private void formX_Click(object sender, EventArgs e)
+        {
+            housePosX = Int32.Parse(xBox.Text);
+        }
+
+        private void formY_Click(object sender, EventArgs e)
+        {
+            housePosY = Int32.Parse(yBox.Text);
+        }
+
+        private void formZ_Click(object sender, EventArgs e)
+        {
+            housePosZ = Int32.Parse(zBox.Text);
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            plotter.bCancelRequested = true;
         }
     }
 }

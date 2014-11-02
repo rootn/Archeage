@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows.Forms;
+using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Windows.Forms;
 using ArcheBuddy.Bot.Classes;
 
 namespace Plotter.Source
@@ -13,6 +13,7 @@ namespace Plotter.Source
         private Creature housePlot = null;
         private PlotForm plotForm;
         private Thread formThread;
+        public bool bCancelRequested = false;
 
         public static string GetPluginAuthor()
         {
@@ -77,15 +78,47 @@ namespace Plotter.Source
         //Call on plugin start
         public void PluginRun()
         {
+            ClearLogs();
+
             plotForm = new PlotForm();
             plotForm.setPlotter(this);
             formThread = new Thread(runForm);
             formThread.Start();
+
+            while (!bCancelRequested)
+                Thread.Sleep(100);
+
+            StopPlugin("House Plotter\\House Plotter.dll");
         }
 
         //Call on plugin stop
         public void PluginStop()
         {
+            bCancelRequested = true;
+
+            try
+            {
+                if (plotForm != null)
+                {
+                    plotForm.Invoke(new Action(() => plotForm.Close()));
+                    plotForm.Invoke(new Action(() => plotForm.Dispose()));
+                }
+
+                Application.Exit();
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine(error.ToString());
+            }
+
+            try
+            {
+                formThread.Abort();
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine(error);
+            }
         }
     }
 }

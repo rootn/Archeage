@@ -4,7 +4,6 @@ C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plot
 C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\x86\Debug\ArcheBuddy.dll
 C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\x86\Debug\Buddy.Store.dll
 C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\bin\x86\Debug\Buddy.Auth.dll
-C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\x86\Debug\House Plotter.csprojResolveAssemblyReference.cache
 C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\x86\Debug\Plotter.PlotForm.resources
 C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\x86\Debug\House_Plotter.Properties.Resources.resources
 C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\x86\Debug\House Plotter.csproj.GenerateResource.Cache
