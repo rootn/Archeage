@@ -1,0 +1,5 @@
+c:\users\jefffrey\documents\visual studio 2012\Projects\House Plotter\House Plotter\bin\Debug\House Plotter.exe.config
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Debug\Plotter.PlotForm.resources
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Debug\House_Plotter.Properties.Resources.resources
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Debug\House Plotter.csproj.GenerateResource.Cache
+C:\Users\Jefffrey\Documents\Visual Studio 2012\Projects\House Plotter\House Plotter\obj\Debug\House Plotter.csprojResolveAssemblyReference.cache
